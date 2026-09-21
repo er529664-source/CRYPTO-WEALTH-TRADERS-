@@ -6,3 +6,19 @@
 .investment-target{margin:8px 0 18px;font-size:1.25rem;font-weight:700}
 
 .disclosure-box{margin-top:24px;padding:18px 20px;border-radius:14px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.025);line-height:1.65}
+
+.language-picker{display:flex;align-items:center;gap:8px;margin-left:12px}.language-picker label{font-size:12px;color:#aebbd1;white-space:nowrap}.language-picker select{background:#101827;color:#f5f7fb;border:1px solid #2c3b54;border-radius:10px;padding:9px 10px;max-width:190px}.google-translate-hidden{display:none}.goog-te-banner-frame.skiptranslate{display:none!important}body{top:0!important}.goog-tooltip{display:none!important}.goog-text-highlight{background:transparent!important;box-shadow:none!important}@media(max-width:800px){.language-picker{margin:10px 0 0;width:100%}.language-picker select{width:100%;max-width:none}.navin{flex-wrap:wrap}.links{flex-wrap:wrap}}
+
+.testimony-page{padding-top:95px}
+.testimony-page h1{font-size:clamp(38px,6vw,64px);margin:8px 0 12px}
+.testimony-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.testimony-card{display:block;width:100%;padding:0;background:#0d1915;border:1px solid #1d342b;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .2s ease,border-color .2s ease}
+.testimony-card:hover{transform:translateY(-3px);border-color:#27d17f}
+.testimony-card img{display:block;width:100%;height:auto;max-height:720px;object-fit:contain;background:#07100d}
+.testimony-note{margin-top:28px}
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.9);display:flex;align-items:center;justify-content:center;padding:30px}
+.lightbox[hidden]{display:none}
+.lightbox img{max-width:95vw;max-height:92vh;object-fit:contain;border-radius:8px}
+.lightbox-close{position:absolute;top:15px;right:20px;width:46px;height:46px;border:0;border-radius:50%;background:#fff;color:#000;font-size:32px;line-height:1;cursor:pointer}
+.lightbox-open{overflow:hidden}
+@media(max-width:800px){.testimony-grid{grid-template-columns:1fr}.testimony-page{padding-top:80px}}
