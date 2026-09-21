@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Investment Testimonies | CRYPTO WEALTH TRADERS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="navin">
+    <a class="brand" href="index.html"><img src="logo.jpg" alt="CRYPTO WEALTH TRADERS logo"></a>
+    <div class="links">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="testimony-page">
+  <section>
+    <div class="sectionhead">
+      <div class="eyebrow">Community Feedback</div>
+      <h1>Investment Testimonies</h1>
+      <p class="muted">Screenshots shared by investors and community members are displayed below as submitted.</p>
+    </div>
+    <div class="testimony-grid">
+      <button class="testimony-card" type="button" data-full="testimony-1.jpg" aria-label="Open investment testimony 1">
+        <img src="testimony-1.jpg" alt="Investor testimony screenshot 1" loading="lazy">
+      </button>
+      <button class="testimony-card" type="button" data-full="testimony-2.jpg" aria-label="Open investment testimony 2">
+        <img src="testimony-2.jpg" alt="Investor testimony screenshot 2" loading="lazy">
+      </button>
+    </div>
+    <div class="notice testimony-note">
+      These are user-submitted screenshots and are presented for informational purposes only. Individual experiences and results may vary; testimonials are not guarantees of future trading or investment results.
+    </div>
+  </section>
+</main>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox-close" type="button" aria-label="Close">×</button>
+  <img id="lightboxImage" src="" alt="Expanded investment testimony">
+</div>
+<script>
+document.querySelectorAll('.testimony-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const box=document.getElementById('lightbox');
+    const img=document.getElementById('lightboxImage');
+    img.src=card.dataset.full;
+    box.hidden=false;
+    document.body.classList.add('lightbox-open');
+  });
+});
+const closeBox=()=>{const box=document.getElementById('lightbox');box.hidden=true;document.body.classList.remove('lightbox-open');};
+document.querySelector('.lightbox-close').addEventListener('click',closeBox);
+document.getElementById('lightbox').addEventListener('click',e=>{if(e.target.id==='lightbox')closeBox();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBox();});
+</script>
+</body>
+</html>
